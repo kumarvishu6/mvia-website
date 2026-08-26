@@ -1,0 +1,795 @@
+.page {
+  --font-display: "Newsreader", serif;
+  --font-body: "Nunito Sans", sans-serif;
+  font-family: var(--font-body);
+  --forest: #173d32;
+  --forest-deep: #0f2820;
+  --ivory: #f5f0e6;
+  --clay: #b96f4a;
+  --gold: #c3a15b;
+  --charcoal: #232623;
+  --ivory-dim: rgba(245, 240, 230, 0.72);
+  background: var(--forest-deep);
+  color: var(--ivory);
+  line-height: 1.65;
+}
+
+.page h1,
+.page h2,
+.page h3,
+.page h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--ivory);
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay);
+  font-weight: 700;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(15, 40, 32, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(245, 240, 230, 0.1);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--ivory);
+  font-weight: 500;
+}
+
+.logo span {
+  color: var(--clay);
+}
+
+.navlinks {
+  display: flex;
+  gap: 32px;
+  font-size: 15px;
+  color: var(--ivory);
+}
+
+.navlinks a {
+  opacity: 0.75;
+}
+
+.navlinks a:hover {
+  opacity: 1;
+}
+
+.navCta {
+  background: var(--ivory);
+  color: var(--forest-deep);
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navCta:hover {
+  background: #fff;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger span {
+  width: 22px;
+  height: 2px;
+  background: var(--ivory);
+  border-radius: 2px;
+}
+
+.hero {
+  padding: 170px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.heroGrid h1 {
+  font-size: clamp(38px, 5.2vw, 60px);
+  margin: 18px 0 24px;
+}
+
+.heroGrid > div:first-child p {
+  font-size: 18px;
+  color: var(--ivory-dim);
+  max-width: 480px;
+  margin-bottom: 36px;
+}
+
+.heroYoga {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  animation: yogaFloat 7s ease-in-out infinite, fadeIn 1.1s ease 0.3s both;
+  pointer-events: none;
+}
+
+.heroYoga svg {
+  width: 62%;
+  height: 62%;
+}
+
+@keyframes yogaFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroYoga {
+    animation: none;
+  }
+}
+
+.ctaRow {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background: var(--ivory);
+  color: var(--forest-deep);
+  padding: 16px 30px;
+  border-radius: 999px;
+  font-size: 14.5px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btnPrimary:hover {
+  background: #fff;
+}
+
+.btnGhost {
+  border: 1.5px solid var(--ivory);
+  color: var(--ivory);
+  padding: 14.5px 28px;
+  border-radius: 999px;
+  font-size: 14.5px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.btnGhost:hover {
+  background: var(--ivory);
+  color: var(--forest-deep);
+}
+
+.heroArt {
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+
+.blob {
+  position: absolute;
+  inset: 0;
+  border-radius: 42% 58% 63% 37% / 47% 42% 58% 53%;
+  background: linear-gradient(150deg, var(--clay), var(--forest));
+}
+
+.blob::after {
+  content: "";
+  position: absolute;
+  inset: 26px;
+  border-radius: inherit;
+  border: 1px solid rgba(245, 240, 230, 0.25);
+}
+
+.blobLabel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--ivory);
+  text-align: center;
+}
+
+.blobLabel .big {
+  font-family: var(--font-display);
+  font-size: 52px;
+}
+
+.blobLabel .small {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-top: 6px;
+}
+
+.section {
+  padding: 110px 0;
+}
+
+.sectionAlt {
+  background: var(--forest);
+}
+
+.sectionHead {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.sectionHead h2 {
+  font-size: clamp(30px, 3.8vw, 44px);
+  margin-top: 14px;
+}
+
+.sectionHead p {
+  color: var(--ivory-dim);
+  margin-top: 16px;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal[data-revealed="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.methodWrap {
+  position: relative;
+}
+
+.methodRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.methodCircle {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--ivory);
+  color: var(--forest-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.35);
+}
+
+.methodItem {
+  text-align: center;
+}
+
+.methodItem h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.methodItem p {
+  font-size: 14px;
+  color: var(--ivory-dim);
+}
+
+.curveLine {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 1;
+}
+
+.programsWrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+
+.programCard {
+  background: #fff;
+  border-radius: 22px;
+  padding: 36px 30px;
+  box-shadow: 0 20px 45px -25px rgba(23, 61, 50, 0.25);
+  transition: transform 0.25s;
+}
+
+.programCardOffset {
+  transform: translateY(-18px);
+}
+
+.programCard:hover {
+  transform: translateY(-6px);
+}
+
+.programCard .dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(185, 111, 74, 0.12);
+  color: var(--clay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.programCard h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.programCard p {
+  font-size: 14.5px;
+  color: #4e5850;
+  margin-bottom: 18px;
+}
+
+.programCard .link {
+  color: var(--forest);
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.aboutSection {
+  background: var(--forest);
+  color: var(--ivory);
+}
+
+.aboutSection .eyebrow {
+  color: var(--clay);
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.aboutCircle {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: rgba(245, 240, 230, 0.08);
+  border: 1px solid rgba(245, 240, 230, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutCircle span {
+  font-family: var(--font-display);
+  font-size: 64px;
+  color: var(--clay);
+}
+
+.aboutSection h2 {
+  color: var(--ivory);
+  margin-top: 14px;
+}
+
+.aboutSection p {
+  color: rgba(245, 240, 230, 0.75);
+  margin-top: 18px;
+  font-size: 16px;
+}
+
+.aboutCreds {
+  display: flex;
+  gap: 12px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+.aboutCreds span {
+  background: rgba(245, 240, 230, 0.1);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12.5px;
+}
+
+/* Featured Botanicals */
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.featuredCard {
+  background: #fff;
+  border-radius: 22px;
+  padding: 32px 28px 30px;
+  box-shadow: 0 20px 45px -25px rgba(0, 0, 0, 0.35);
+  color: var(--charcoal);
+  transition: transform 0.25s;
+}
+
+.featuredCard:hover {
+  transform: translateY(-6px);
+}
+
+.featuredThumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(185, 111, 74, 0.12);
+  color: var(--clay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.featuredCard h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: var(--forest-deep);
+}
+
+.featuredCard p {
+  color: #4e5850;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.featuredFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.featuredFooter .price {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--forest-deep);
+}
+
+.featuredFooter .link {
+  font-size: 13px;
+  color: var(--forest);
+  font-weight: 700;
+}
+
+.featuredMore {
+  text-align: center;
+  margin-top: 46px;
+}
+
+@media (max-width: 900px) {
+  .featuredGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Booking widget */
+.bookingCard {
+  max-width: 560px;
+  margin: 0 auto;
+  background: rgba(245, 240, 230, 0.06);
+  border: 1px solid rgba(245, 240, 230, 0.18);
+  border-radius: 28px;
+  padding: 44px 40px 40px;
+  text-align: center;
+}
+
+.bookingHead h3 {
+  font-size: clamp(24px, 3vw, 30px);
+  margin: 14px 0 30px;
+  color: var(--ivory);
+}
+
+.bookingField {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.bookingField label {
+  display: block;
+  font-size: 12.5px;
+  letter-spacing: 0.03em;
+  color: var(--ivory-dim);
+  margin-bottom: 8px;
+}
+
+.bookingSelect {
+  width: 100%;
+  background: var(--forest-deep);
+  border: 1px solid rgba(245, 240, 230, 0.25);
+  color: var(--ivory);
+  padding: 13px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: var(--font-body);
+}
+
+.bookingDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.dayChip {
+  background: var(--forest-deep);
+  border: 1px solid rgba(245, 240, 230, 0.2);
+  border-radius: 12px;
+  color: var(--ivory-dim);
+  padding: 10px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dayChip strong {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--ivory);
+  font-weight: 500;
+}
+
+.dayChip:hover {
+  border-color: var(--ivory);
+}
+
+.dayChipActive {
+  background: var(--ivory);
+  border-color: var(--ivory);
+  color: var(--forest-deep);
+}
+
+.dayChipActive strong {
+  color: var(--forest-deep);
+}
+
+.bookingTimes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.timeChip {
+  border: 1px solid rgba(245, 240, 230, 0.25);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ivory-dim);
+  padding: 9px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.timeChip:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.timeChip:not(:disabled):hover {
+  border-color: var(--ivory);
+  color: var(--ivory);
+}
+
+.timeChipActive {
+  background: var(--ivory);
+  border-color: var(--ivory);
+  color: var(--forest-deep) !important;
+}
+
+.bookingConfirm {
+  width: 100%;
+  background: var(--ivory);
+  color: var(--forest-deep);
+  border: none;
+  border-radius: 999px;
+  padding: 16px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.bookingConfirm:disabled {
+  background: rgba(245, 240, 230, 0.2);
+  color: var(--ivory-dim);
+  cursor: not-allowed;
+}
+
+.bookingConfirm:not(:disabled):hover {
+  background: #fff;
+}
+
+.bookingNote {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--ivory-dim);
+  opacity: 0.8;
+}
+
+.bookingSuccessMark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--ivory);
+  color: var(--ivory);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+  font-size: 22px;
+}
+
+.bookingCard h3 {
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+.bookingCard p {
+  color: var(--ivory-dim);
+  font-size: 15px;
+  margin-bottom: 26px;
+}
+
+@media (max-width: 560px) {
+  .bookingDays {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .bookingCard {
+    padding: 34px 22px 30px;
+  }
+}
+
+.finalCta {
+  text-align: center;
+  padding: 130px 0;
+}
+
+.finalCta h2 {
+  font-size: clamp(32px, 4.6vw, 48px);
+  max-width: 620px;
+  margin: 16px auto 30px;
+}
+
+.footer {
+  background: var(--forest-deep);
+  color: rgba(245, 240, 230, 0.7);
+  padding: 60px 0 30px;
+}
+
+.footGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 44px;
+}
+
+.footGrid h4 {
+  color: var(--ivory);
+  font-family: var(--font-body);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.footGrid a,
+.footGrid p {
+  color: rgba(245, 240, 230, 0.65);
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footBottom {
+  border-top: 1px solid rgba(245, 240, 230, 0.15);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12.5px;
+}
+
+@media (max-width: 900px) {
+  .navlinks {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  .heroGrid,
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+  .methodRow,
+  .programsWrap {
+    grid-template-columns: 1fr;
+  }
+  .programCardOffset {
+    transform: none;
+  }
+  .footGrid {
+    grid-template-columns: 1fr;
+  }
+}
