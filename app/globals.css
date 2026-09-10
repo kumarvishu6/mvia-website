@@ -1,3 +1,15 @@
+:root {
+  --font-display: "Newsreader", serif;
+  --font-body: "Nunito Sans", sans-serif;
+  --forest: #173d32;
+  --forest-deep: #0f2820;
+  --ivory: #f5f0e6;
+  --ivory-dim: rgba(245, 240, 230, 0.72);
+  --clay: #b96f4a;
+  --charcoal: #232623;
+  --white: #ffffff;
+}
+
 *,
 *::before,
 *::after {
@@ -11,8 +23,27 @@ body {
 }
 
 body {
+  font-family: var(--font-body);
+  background: var(--forest-deep);
+  color: var(--ivory);
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--ivory);
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 html {

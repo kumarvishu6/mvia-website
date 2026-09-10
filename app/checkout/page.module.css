@@ -1,0 +1,362 @@
+.page {
+  background: var(--forest-deep);
+  color: var(--ivory);
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay);
+  font-weight: 700;
+}
+
+.pageHeader {
+  padding: 190px 0 10px;
+}
+
+.pageHeader h1 {
+  font-size: clamp(30px, 4.2vw, 46px);
+  margin-top: 14px;
+}
+
+/* Progress steps */
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  font-size: 12.5px;
+  color: var(--ivory-dim);
+  flex-wrap: wrap;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepDot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 240, 230, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.stepActive {
+  color: var(--ivory);
+}
+
+.stepActive .stepDot {
+  background: var(--clay);
+  border-color: var(--clay);
+  color: #fff;
+  font-weight: 700;
+}
+
+.stepDone .stepDot {
+  background: rgba(245, 240, 230, 0.16);
+  border-color: rgba(245, 240, 230, 0.3);
+  color: var(--ivory);
+}
+
+.stepLine {
+  width: 26px;
+  height: 1px;
+  background: rgba(245, 240, 230, 0.24);
+}
+
+.section {
+  padding: 34px 0 120px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ---------- Form ---------- */
+.card {
+  background: rgba(245, 240, 230, 0.05);
+  border: 1px solid rgba(245, 240, 230, 0.14);
+  border-radius: 22px;
+  padding: 32px;
+  margin-bottom: 22px;
+}
+
+.card h2 {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: block;
+  font-size: 12.5px;
+  color: var(--ivory-dim);
+  margin-bottom: 7px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  background: var(--forest-deep);
+  border: 1px solid rgba(245, 240, 230, 0.22);
+  border-radius: 10px;
+  color: var(--ivory);
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  transition: border-color 0.2s ease;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--clay);
+}
+
+.field input::placeholder {
+  color: rgba(245, 240, 230, 0.35);
+}
+
+/* ---------- Summary ---------- */
+.summary {
+  background: rgba(245, 240, 230, 0.05);
+  border: 1px solid rgba(245, 240, 230, 0.14);
+  border-radius: 22px;
+  padding: 30px;
+  position: sticky;
+  top: 110px;
+}
+
+.summary h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.miniItems {
+  border-bottom: 1px solid rgba(245, 240, 230, 0.14);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.miniItem {
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.miniThumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+}
+
+.miniThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.qtyBadge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 19px;
+  height: 19px;
+  border-radius: 999px;
+  background: var(--clay);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.miniName {
+  font-size: 13.5px;
+  line-height: 1.35;
+}
+
+.miniPrice {
+  font-size: 13.5px;
+  color: var(--ivory-dim);
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 14.5px;
+  color: var(--ivory-dim);
+  padding: 8px 0;
+}
+
+.summaryRow strong {
+  color: var(--ivory);
+  font-weight: 400;
+}
+
+.discountRow,
+.discountRow strong {
+  color: var(--clay);
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: 1px solid rgba(245, 240, 230, 0.16);
+  margin-top: 12px;
+  padding-top: 18px;
+  font-size: 15px;
+}
+
+.totalRow .amount {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--ivory);
+}
+
+.payBtn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: var(--ivory);
+  color: var(--forest-deep);
+  border: none;
+  border-radius: 999px;
+  padding: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--font-body);
+  cursor: pointer;
+  margin-top: 22px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.2s ease;
+}
+
+.payBtn:hover:not(:disabled) {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -16px rgba(0, 0, 0, 0.7);
+}
+
+.payBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.pendingNote {
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ivory-dim);
+  background: rgba(185, 111, 74, 0.14);
+  border: 1px solid rgba(185, 111, 74, 0.35);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.backLink {
+  display: block;
+  text-align: center;
+  margin-top: 14px;
+  font-size: 13.5px;
+  color: var(--ivory-dim);
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--ivory);
+}
+
+.trustRow {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 11.5px;
+  color: var(--ivory-dim);
+  opacity: 0.8;
+}
+
+.empty {
+  text-align: center;
+  padding: 70px 0 120px;
+}
+
+.empty h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.empty p {
+  color: var(--ivory-dim);
+  margin-bottom: 26px;
+}
+
+.btnPrimary {
+  background: var(--ivory);
+  color: var(--forest-deep);
+  padding: 15px 30px;
+  border-radius: 999px;
+  font-size: 14.5px;
+  font-weight: 600;
+  display: inline-block;
+  transition: transform 0.25s ease, background 0.2s ease;
+}
+
+.btnPrimary:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.skeleton {
+  padding: 60px 0 120px;
+  color: var(--ivory-dim);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .summary {
+    position: static;
+  }
+  .fieldRow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

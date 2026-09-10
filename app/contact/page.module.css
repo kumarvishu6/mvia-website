@@ -1,0 +1,161 @@
+.page {
+  background: var(--forest-deep);
+  color: var(--ivory);
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay);
+  font-weight: 700;
+}
+
+.pageHeader {
+  padding: 200px 0 50px;
+  text-align: center;
+}
+
+.pageHeader h1 {
+  font-size: clamp(30px, 4.4vw, 46px);
+  margin: 16px auto 18px;
+  max-width: 620px;
+}
+
+.pageHeader p {
+  color: var(--ivory-dim);
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: 15.5px;
+}
+
+.section {
+  padding: 20px 0 110px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.card {
+  background: rgba(245, 240, 230, 0.05);
+  border: 1px solid rgba(245, 240, 230, 0.14);
+  border-radius: 22px;
+  padding: 36px;
+}
+
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-size: 12.5px;
+  letter-spacing: 0.03em;
+  color: var(--ivory-dim);
+  margin-bottom: 8px;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  background: var(--forest-deep);
+  border: 1px solid rgba(245, 240, 230, 0.2);
+  border-radius: 10px;
+  color: var(--ivory);
+  padding: 13px 14px;
+  font-size: 14px;
+  font-family: var(--font-body);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.submitBtn {
+  width: 100%;
+  background: var(--ivory);
+  color: var(--forest-deep);
+  border: none;
+  border-radius: 999px;
+  padding: 15px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submitBtn:hover {
+  background: #fff;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.successNote {
+  margin-top: 16px;
+  font-size: 13.5px;
+  color: var(--clay);
+}
+
+.calendlyPanel {
+  aspect-ratio: 4 / 5;
+  border-radius: 22px;
+  background: var(--forest);
+  border: 1px solid rgba(245, 240, 230, 0.14);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  gap: 18px;
+}
+
+.calendlyPanel p {
+  color: var(--ivory-dim);
+  font-size: 14px;
+  max-width: 320px;
+}
+
+.calendlyBtn {
+  background: var(--ivory);
+  color: var(--forest-deep);
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contactInfo {
+  margin-top: 30px;
+  display: grid;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--ivory-dim);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

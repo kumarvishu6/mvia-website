@@ -1,0 +1,52 @@
+.page {
+  background: var(--forest-deep);
+  color: var(--ivory);
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay);
+  font-weight: 700;
+}
+
+.pageHeader {
+  padding: 200px 0 40px;
+}
+
+.pageHeader h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-top: 14px;
+}
+
+.section {
+  padding: 40px 0 110px;
+}
+
+.block {
+  border-top: 1px solid rgba(245, 240, 230, 0.14);
+  padding: 34px 0;
+}
+
+.block:first-child {
+  border-top: none;
+}
+
+.block h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.block p {
+  color: var(--ivory-dim);
+  font-size: 14.5px;
+  margin-bottom: 10px;
+}

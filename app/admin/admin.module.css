@@ -1,0 +1,305 @@
+.page {
+  background: var(--forest-deep);
+  color: var(--ivory);
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Login */
+.loginWrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(245, 240, 230, 0.05);
+  border: 1px solid rgba(245, 240, 230, 0.14);
+  border-radius: 22px;
+  padding: 40px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.logo span {
+  color: var(--clay);
+}
+
+.loginCard h1 {
+  font-size: 20px;
+  margin-bottom: 26px;
+  font-weight: 500;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: block;
+  font-size: 12.5px;
+  color: var(--ivory-dim);
+  margin-bottom: 8px;
+}
+
+.field input {
+  width: 100%;
+  background: var(--forest-deep);
+  border: 1px solid rgba(245, 240, 230, 0.2);
+  border-radius: 10px;
+  color: var(--ivory);
+  padding: 12px 14px;
+  font-size: 14px;
+}
+
+.submitBtn {
+  width: 100%;
+  background: var(--ivory);
+  color: var(--forest-deep);
+  border: none;
+  border-radius: 999px;
+  padding: 14px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.errorText {
+  color: #e08a6a;
+  font-size: 13px;
+  margin-top: 14px;
+}
+
+/* Dashboard chrome */
+.topbar {
+  border-bottom: 1px solid rgba(245, 240, 230, 0.12);
+  padding: 22px 0;
+}
+
+.topbarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navlinks {
+  display: flex;
+  gap: 22px;
+  font-size: 14px;
+}
+
+.navlinks a {
+  color: var(--ivory-dim);
+}
+
+.navlinks a:hover {
+  color: var(--ivory);
+}
+
+.signOutBtn {
+  background: none;
+  border: 1px solid rgba(245, 240, 230, 0.25);
+  color: var(--ivory-dim);
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.signOutBtn:hover {
+  color: var(--ivory);
+  border-color: var(--ivory);
+}
+
+.content {
+  padding: 44px 0 90px;
+}
+
+.headRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.headRow h1 {
+  font-size: 26px;
+}
+
+.primaryBtn {
+  background: var(--ivory);
+  color: var(--forest-deep);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Product table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ivory-dim);
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(245, 240, 230, 0.14);
+}
+
+.table td {
+  padding: 16px 14px;
+  border-bottom: 1px solid rgba(245, 240, 230, 0.08);
+  font-size: 14.5px;
+}
+
+.table tr:hover td {
+  background: rgba(245, 240, 230, 0.03);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(185, 111, 74, 0.2);
+  color: var(--clay);
+}
+
+.rowActions {
+  display: flex;
+  gap: 10px;
+}
+
+.rowActions button,
+.rowActions a {
+  background: none;
+  border: 1px solid rgba(245, 240, 230, 0.25);
+  color: var(--ivory-dim);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.rowActions button:hover,
+.rowActions a:hover {
+  color: var(--ivory);
+  border-color: var(--ivory);
+}
+
+.deleteBtn:hover {
+  color: #e08a6a !important;
+  border-color: #e08a6a !important;
+}
+
+/* Product form */
+.formCard {
+  background: rgba(245, 240, 230, 0.05);
+  border: 1px solid rgba(245, 240, 230, 0.14);
+  border-radius: 22px;
+  padding: 34px;
+  max-width: 640px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.formCard .field input,
+.formCard .field select,
+.formCard .field textarea {
+  width: 100%;
+  background: var(--forest-deep);
+  border: 1px solid rgba(245, 240, 230, 0.2);
+  border-radius: 10px;
+  color: var(--ivory);
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: var(--font-body);
+}
+
+.formCard .field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.formActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.ghostBtn {
+  background: none;
+  border: 1px solid rgba(245, 240, 230, 0.25);
+  color: var(--ivory);
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--ivory-dim);
+}
+
+.messageCard {
+  border-bottom: 1px solid rgba(245, 240, 230, 0.1);
+  padding: 20px 0;
+}
+
+.messageCard .meta {
+  font-size: 12.5px;
+  color: var(--ivory-dim);
+  margin-bottom: 8px;
+}
+
+.messageCard .meta strong {
+  color: var(--ivory);
+}
+
+@media (max-width: 700px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fieldHint {
+  font-size: 11.5px;
+  color: var(--ivory-dim);
+  margin-top: 7px;
+  line-height: 1.5;
+  opacity: 0.85;
+}

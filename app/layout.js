@@ -1,9 +1,10 @@
 import "./globals.css";
+import { CartProvider } from "./lib/CartContext";
 
 export const metadata = {
-  title: "MVIA — Choose a Homepage Direction",
+  title: "MVIA — Strength for your body. Space for your mind.",
   description:
-    "Three fully-built homepage concepts for THE MVIA INC, same content, different visual language.",
+    "MVIA is an integrated wellness company combining yoga, strength training, breathwork, and meditation — delivered in the studio, at home, at work, and on retreat.",
 };
 
 export default function RootLayout({ children }) {
@@ -17,7 +18,9 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <CartProvider>{children}</CartProvider>
+      </body>
     </html>
   );
 }

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#F8F4EB"/>
+      <stop offset="100%" stop-color="#EDE3D0"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="44%" r="52%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <circle cx="300" cy="268" r="196" fill="#E6DCC5" opacity="0.55"/>
+  <circle cx="300" cy="268" r="196" fill="url(#halo)"/>
+  <circle cx="300" cy="268" r="196" fill="none" stroke="#B96F4A" stroke-width="1.1" opacity="0.35"/>
+  <g transform="rotate(0 300 300)">
+    <path d="M292.0,430.0 Q331.3,271.0 248.0,130.0 Q208.7,289.0 292.0,430.0 Z" fill="#DCE7DF" stroke="#173D32" stroke-width="2.6" stroke-linejoin="round" opacity="0.85"/>
+    <path d="M288.0,420.0 L250.0,150.0" stroke="#173D32" stroke-width="1.6" opacity="0.45" stroke-linecap="round"/>
+    <path d="M300.0,430.0 Q378.1,325.9 372.0,196.0 Q293.9,300.1 300.0,430.0 Z" fill="#E4EDE5" stroke="#173D32" stroke-width="2.4" stroke-linejoin="round" opacity="0.8"/>
+    <path d="M214,376 C206,344 232,320 268,320 C296,320 306,332 336,330 C374,328 400,348 398,378 C396,408 366,424 328,422 C296,420 282,410 254,412 C226,414 218,400 214,376 Z" fill="#B96F4A" stroke="#173D32" stroke-width="2.8" stroke-linejoin="round" opacity="0.92"/>
+    <path d="M258,322 C252,300 262,286 280,284 C296,282 304,296 300,318" fill="#D89B79" stroke="#173D32" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M344,330 C346,306 360,294 376,300 C390,306 390,322 380,336" fill="#D89B79" stroke="#173D32" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M262,336 C256,358 258,388 266,408" fill="none" stroke="#173D32" stroke-width="1.6" opacity="0.45" stroke-linecap="round"/>
+    <path d="M300,336 C294,358 296,388 304,408" fill="none" stroke="#173D32" stroke-width="1.6" opacity="0.45" stroke-linecap="round"/>
+    <path d="M340,336 C334,358 336,388 344,408" fill="none" stroke="#173D32" stroke-width="1.6" opacity="0.45" stroke-linecap="round"/>
+  </g>
+</svg>
